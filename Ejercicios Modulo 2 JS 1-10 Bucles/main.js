@@ -1,4 +1,4 @@
-//Ejercicio 1
+//Ejercicio 1 aadsas
 /*Realizar un programa que permita el ingreso de un número y muestre su tabla de
 multiplicar (Los primeros 10 múltiplos). */
 
