@@ -114,3 +114,54 @@ let familia = [
         estaCansadx: false
     }
 ]
+
+for (const miembro of familia) {
+    console.log(`Hola, mi nombre es ${miembro.nombre}, tengo ${miembro.edad} y soy ${miembro.nacionalidad}. Y si la pregunta es "estas cansadx?", la respuesta es ${miembro.estaCansadx}`)
+}
+
+//Ejercicio 8
+/*Dado un array de 10 números, realizar un programa que recorra el array y solo muestre
+los números impares.*/
+
+let numerosEj8 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for (const numero of numerosEj8) {
+    if (numero % 2 !== 0)
+    console.log(numero)
+}
+
+//Ejercicio 9
+/*Realizar un programa que permita la entrada de números y calcule la suma de los
+números pares por un lado y los impares por otro, el ingreso de dato finaliza cuando el
+usuario ingresa un 0.*/
+
+let numeroIngresadoEj9 = 0
+let sumaPar = 0
+let sumaImpar = 0
+
+do {
+    numeroIngresadoEj9 = Number(prompt("Ingrese un numero"))
+    if (numeroIngresadoEj9 % 2 === 0){
+        sumaPar += numeroIngresadoEj9
+        alert(sumaPar)
+    } else if (numeroIngresadoEj9 % 2 !== 0){
+        sumaImpar += numeroIngresadoEj9
+        alert(sumaImpar)
+    }
+} while (numeroIngresadoEj9 !== 0);
+
+//Ejercicio 10
+/*Dado un array de 10 números, realizar un programa que imprima por pantalla el
+número más grande.*/
+
+let array10 = [1, 251, 3, 46, 5, 65, 7, 1088, 9, 10]
+console.log(array10)
+
+let numeroEj10 = 0
+
+for (let index = 0; index < array10.length; index++) {
+    if (array10[index] > numeroEj10){
+        numeroEj10 = array10[index]
+    }
+}
+console.log(numeroEj10)
