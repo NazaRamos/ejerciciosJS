@@ -1,0 +1,4 @@
+#tabla, tr, td, th{
+    outline: 1px solid black;
+    border-collapse: collapse;
+}
