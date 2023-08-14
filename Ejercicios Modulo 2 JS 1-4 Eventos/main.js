@@ -67,24 +67,23 @@ defecto, por ejemplo 1 dólar = 500 pesos ( valor de ejemplo ), y al hacer algú
 en alguno de los inputs se deberá ver reflejado su correspondiente valor en la
 moneda a convertir.*/
 
-let pesoArgJS = document.getElementById("pesoArg")
-let dolarUSJS = document.getElementById("dolarUS")
-
-let precioPeso = 287
-let precioDolar = 1
-
-pesoArgJS.addEventListener("keydown", cambioMoneda1)
-dolarUSJS.addEventListener("keydown", cambioMoneda2)
+let pesoArg = document.getElementById('pesoArg');
+let dolarUS = document.getElementById('dolarUS')
+let dolares = 1
+let pesosArgentinos = 287
 
 
-function cambioMoneda1 (){
-    let calculo = pesoArgJS.value * precioDolar
-    dolarUSJS.value = calculo
-    return cambioMoneda1
+
+pesoArg.addEventListener('keyup', calculoDivisaPesoDolar)
+
+dolarUS.addEventListener('keyup', calculoDivisasDeDolaraPeso)
+
+function calculoDivisasDeDolaraPeso (){
+
+    pesoArg.value=dolarUS.value*pesosArgentinos
 }
 
-function cambioMoneda2 (){
-    let calculo2 = pesoArgJS * dolarUSJS.value
-    pesoArgJS.value = calculo2
-    return cambioMoneda2
+function calculoDivisaPesoDolar(){
+
+    dolarUS.value=pesoArg.value/pesosArgentinos
 }
